@@ -1,17 +1,86 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>Home</ion-title>
+    <ion-title>Welcome to Waitlist!</ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  <h2>Welcome to Ionic!</h2>
-  <p>
-    This starter project comes with simple tabs-based layout for apps
-    that are going to primarily use a Tabbed UI.
-  </p>
-  <p>
-    Take a look at the <code>src/pages/</code> directory to add or change tabs,
-    update any existing page or create new pages.
-  </p>
+  <div class="wd-btn-profile">
+    <ion-icon name="contact" class="btn-profile"></ion-icon>
+  </div>
+
+  <!-- Searchbar with cancel button shown on focus -->
+  <ion-searchbar showCancelButton="focus" placeholder="Where do you want to go?"></ion-searchbar>
+
+  <div style="width: 100%; position: relative; margin-top: 1em;">
+    <div style="display: inline-block;">
+      <h4>Hot New Places</h4>
+    </div>
+    <div style="display: inline-block; right: 0%; position: absolute; color: blue">
+      <h5>See all &rarr;</h5>
+    </div>
+  </div>
+  <ion-slides pager="false" [speed]="400" [slidesPerView]="2" autoHeight="true"
+  style="height:12em">
+    <ion-slide>
+
+    <ion-card>
+      <img src="../resources/icon.png"/>
+      <ion-card-content>
+        <ion-card-title>
+          Giordano's Pizza
+        </ion-card-title>
+        <p>
+          [187] Discoveries
+          <br>
+          [2105] likes
+        </p>
+      </ion-card-content>
+    </ion-card>
+
+  </ion-slide>
+
+  <ion-slide>
+    <ion-card>
+    <img src=""/>
+    <ion-card-content>
+      <ion-card-title>
+        Pacific
+        </ion-card-title>
+      <p>
+        [678] Discoveries
+        <br>
+        [678] likes
+      </p>
+    </ion-card-content>
+    </ion-card>
+  </ion-slide>
+
+  <ion-slide>
+    <ion-card>
+    <img src=""/>
+    <ion-card-content>
+      <ion-card-title>
+        Super Pizza
+        </ion-card-title>
+      <p>
+        [400] Discoveries
+        <br>
+        [67] likes
+      </p>
+    </ion-card-content>
+    </ion-card>
+  </ion-slide>
+
+
+  </ion-slides>
+
+  <h4>Skip the Line Now</h4>
+
+
+  <div class="wd-btn-nav">
+    <button>
+    <ion-icon name="navigate" class="btn-nav" md="ios-navigate"></ion-icon>
+    </button>
+  </div>
 </ion-content>
